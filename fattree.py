@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#创建网络拓扑
 """Custom topology example
 Adding the 'topos' dict with a key/value pair to generate our newly defined
 topology enables one to pass in '--topo=mytopo' from the command line.
