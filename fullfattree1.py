@@ -1,7 +1,19 @@
+#!/usr/bin/python
+"""Custom topology example
+Adding the 'topos' dict with a key/value pair to generate our newly defined
+topology enables one to pass in '--topo=mytopo' from the command line.
+"""
+
+from mininet.topo import Topo
+from mininet.net import Mininet
+from mininet.node import RemoteController,CPULimitedHost
+from mininet.link import TCLink
+from mininet.util import dumpNodeConnections
+from mininet.log import setLogLevel
 
 def simpleTest():
 	"Create and test a simple network"
-	topo = MyTopo()
+	topo = Topo()
 	net = Mininet( topo, controller=RemoteController, host=CPULimitedHost, link=TCLink )
 	net.addController( 'c0', controller=RemoteController, ip='20.0.1.3', port=6633 )
 	net.start()
