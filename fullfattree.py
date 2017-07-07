@@ -61,7 +61,7 @@ class MyTopo( Topo ):
                 	host = self.addHost( 'h{}'.format( count ) )
                 	self.addLink( sw1, host )
                 	count += 1
- def simpleTest():
+def simpleTest():
 	"Create and test a simple network"
 	topo = MyTopo()
 	net = Mininet( topo, controller=RemoteController, host=CPULimitedHost, link=TCLink )
