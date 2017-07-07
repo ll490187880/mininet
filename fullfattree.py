@@ -1,5 +1,4 @@
 #!/usr/bin/python
-#创建网络拓扑
 """Custom topology example
 Adding the 'topos' dict with a key/value pair to generate our newly defined
 topology enables one to pass in '--topo=mytopo' from the command line.
@@ -63,7 +62,6 @@ class MyTopo( Topo ):
                 	self.addLink( sw1, host )
                 	count += 1
 topos = { 'mytopo': ( lambda: MyTopo() ) }
-#测试连通性代码部分
 def simpleTest():
     "Create and test a simple network"
     topo = MyTopo()
