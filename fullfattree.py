@@ -66,10 +66,8 @@ def simpleTest():
     "Create and test a simple network"
     topo = MyTopo()
     net = Mininet( topo, controller=RemoteController, host=CPULimitedHost, link=TCLink )
-    net.addController( 'c0', controller=RemoteController, ip='10.0.0.7', port=6633 )
+    net.addController( 'c0', controller=RemoteController, ip='20.0.1.3', port=6633 )
     net.start()
-    print "Dumping host connections"
-    dumpNodeConnections(net.hosts )
     print "Testing network connectivity"
     net.pingAll()
     print "Testing bandwidth between h1 with h2, h3, h5"
