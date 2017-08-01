@@ -44,7 +44,6 @@ def myNetwork():
     
     info( '*** Post configure switches and hosts\n')
     CLI(net)
-    net.pingAll()
     net.stop()
 if __name__ == '__main__':
     setLogLevel( 'info' )
