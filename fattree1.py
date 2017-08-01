@@ -81,8 +81,9 @@ def myNetwork():
         controller.start()
         
     info( '*** Starting switches\n')
-    net.get('s2').start([c0])
-    net.get('s1').start([c0])
+    net.get('c').start([c0])
+    net.get('a').start([c0])
+    net.get('e').start([c0])
     
     info( '*** Post configure switches and hosts\n')
     CLI(net)
