@@ -61,6 +61,7 @@ class MyTopo( Topo ):
                 	host = self.addHost( 'h{}'.format( count ) )
                 	self.addLink( sw1, host )
                 	count += 1
+topos = { 'mytopo': ( lambda: MyTopo() ) }
 def simpleTest():
 	"Create and test a simple network"
 	topo = MyTopo()
